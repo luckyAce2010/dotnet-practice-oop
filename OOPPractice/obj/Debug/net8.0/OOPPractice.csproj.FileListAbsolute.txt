@@ -1,0 +1,14 @@
+D:\work\web\practice\oop\OOPPractice\OOPPractice\bin\Debug\net8.0\OOPPractice.exe
+D:\work\web\practice\oop\OOPPractice\OOPPractice\bin\Debug\net8.0\OOPPractice.deps.json
+D:\work\web\practice\oop\OOPPractice\OOPPractice\bin\Debug\net8.0\OOPPractice.runtimeconfig.json
+D:\work\web\practice\oop\OOPPractice\OOPPractice\bin\Debug\net8.0\OOPPractice.dll
+D:\work\web\practice\oop\OOPPractice\OOPPractice\bin\Debug\net8.0\OOPPractice.pdb
+D:\work\web\practice\oop\OOPPractice\OOPPractice\obj\Debug\net8.0\OOPPractice.GeneratedMSBuildEditorConfig.editorconfig
+D:\work\web\practice\oop\OOPPractice\OOPPractice\obj\Debug\net8.0\OOPPractice.AssemblyInfoInputs.cache
+D:\work\web\practice\oop\OOPPractice\OOPPractice\obj\Debug\net8.0\OOPPractice.AssemblyInfo.cs
+D:\work\web\practice\oop\OOPPractice\OOPPractice\obj\Debug\net8.0\OOPPractice.csproj.CoreCompileInputs.cache
+D:\work\web\practice\oop\OOPPractice\OOPPractice\obj\Debug\net8.0\OOPPractice.dll
+D:\work\web\practice\oop\OOPPractice\OOPPractice\obj\Debug\net8.0\refint\OOPPractice.dll
+D:\work\web\practice\oop\OOPPractice\OOPPractice\obj\Debug\net8.0\OOPPractice.pdb
+D:\work\web\practice\oop\OOPPractice\OOPPractice\obj\Debug\net8.0\OOPPractice.genruntimeconfig.cache
+D:\work\web\practice\oop\OOPPractice\OOPPractice\obj\Debug\net8.0\ref\OOPPractice.dll
