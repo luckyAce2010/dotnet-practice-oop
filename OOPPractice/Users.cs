@@ -8,14 +8,18 @@ namespace OOPPractice
 {
     internal abstract class Users
     {
-        protected string _username = "User";
+        protected string _username = "DefaultUsername";
         protected string _role = "Viewer";
 
         //Constructor
-        public Users(string username, string role) 
-        { 
-            _username = username;
-            _role = role;
+        public Users(string username, string role)
+        {
+            if (username == null) throw new ArgumentNullException(nameof(username), "Username cannot be null");
+            if (role == null) throw new ArgumentNullException(nameof(role), "Role cannot be null");
+
+            Username = username;
+            Role = role;
+
         }
 
         protected string Username 

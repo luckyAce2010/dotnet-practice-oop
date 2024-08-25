@@ -12,3 +12,4 @@ D:\work\web\practice\oop\OOPPractice\OOPPractice\obj\Debug\net8.0\refint\OOPPrac
 D:\work\web\practice\oop\OOPPractice\OOPPractice\obj\Debug\net8.0\OOPPractice.pdb
 D:\work\web\practice\oop\OOPPractice\OOPPractice\obj\Debug\net8.0\OOPPractice.genruntimeconfig.cache
 D:\work\web\practice\oop\OOPPractice\OOPPractice\obj\Debug\net8.0\ref\OOPPractice.dll
+D:\work\web\practice\oop\OOPPractice\OOPPractice\obj\Debug\net8.0\OOPPractice.sourcelink.json
