@@ -8,7 +8,7 @@ namespace OOPPractice
         static void Main(string[] args)
         {
             //Variables
-            List<Book> library = new List<Book>();
+            Library library = new Library();
             bool continueMenu = true;
 
             while (continueMenu)
@@ -25,13 +25,13 @@ namespace OOPPractice
                 switch (choice)
                 {
                     case "1":
-                        library = AddBook(library);
+                        library.AddBook();
                         break;
                     case "2":
-                        DisplayAllBooks(library);
+                        library.DisplayAllBooks();
                         break;
                     case "3":
-                        SearchForBook(library);
+                        library.SearchForBook();
                         break;
                     case "4":
                         continueMenu = false;
@@ -53,63 +53,7 @@ namespace OOPPractice
         //Function to display details of the book
         
 
-        public static List<Book> AddBook(List<Book> library)
-        {
-            Console.Clear();
-            Console.Write("Enter Title: ");
-            string title = Console.ReadLine() ?? "Default Title";
-
-            Console.Write("Enter Author: ");
-            string author = Console.ReadLine() ?? "Default Author";
-
-            Console.Write("Enter ISBN: ");
-            string isbn = Console.ReadLine() ?? "No ISBN for this book";
-
-            Book book = new Book(title, author, isbn);
-
-            library.Add(book);
-
-            return library; 
-        }
-
-        public static void DisplayAllBooks(List<Book> library)
-        {
-            int count = 1;
-
-            Console.Clear();
-            Console.WriteLine("Current Books in the Library: ");
-
-
-            foreach (Book book in library)
-            {
-                Console.WriteLine($"{count}. {book.Title} by {book.Author}");
-                count++;
-            }
-        }
-
-        public static void SearchForBook(List<Book> library)
-        {
-            Console.Clear();
-            string titleSearch;
-
-            Console.Write("Enter Title of the Book: ");
-            titleSearch = Console.ReadLine() ?? string.Empty;
-
-            bool condition = false;
-            foreach (Book book in library)
-            {
-                if (titleSearch == book.Title)
-                {
-                    book.DisplayBookInfo();
-                    condition = true;
-                }
-            }
-
-            if (condition == false)
-            {
-                Console.WriteLine("No match...");
-            }
-        }
+        
 
 
     }
