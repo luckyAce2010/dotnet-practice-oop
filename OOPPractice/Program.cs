@@ -50,12 +50,6 @@ namespace OOPPractice
             Console.WriteLine("Thank you for using the Library Management System!");
         }
 
-        //Function to display details of the book
-        
-
-        
-
-
     }
 
 }

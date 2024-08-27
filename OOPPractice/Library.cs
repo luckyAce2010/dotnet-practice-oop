@@ -8,32 +8,28 @@ namespace OOPPractice
 {
     class Library
     {
-        private List<Book> _library = new List<Book> ();
-
-        public List<Book> LibraryOfBooks
-        {
-            get { return _library; }
-            set { _library = value; }
-        }
-
+        private static readonly List<Book> books = new List<Book>();
+        private List<Book> _library = books;
 
         public List<Book> AddBook()
         {
             Console.Clear();
+
+            
             Console.Write("Enter Title: ");
-            string title = Console.ReadLine() ?? "Default Title";
+            string title = ValidateInput("Title");
 
             Console.Write("Enter Author: ");
-            string author = Console.ReadLine() ?? "Default Author";
+            string author = ValidateInput("Author");
 
             Console.Write("Enter ISBN: ");
             string isbn = Console.ReadLine() ?? "No ISBN for this book";
 
             Book book = new Book(title, author, isbn);
 
-            LibraryOfBooks.Add(book);
+            _library.Add(book);
 
-            return LibraryOfBooks;
+            return _library;
         }
 
         public void DisplayAllBooks()
@@ -44,7 +40,7 @@ namespace OOPPractice
             Console.WriteLine("Current Books in the Library: ");
 
 
-            foreach (Book book in LibraryOfBooks)
+            foreach (Book book in _library)
             {
                 Console.WriteLine($"{count}. {book.Title} by {book.Author}");
                 count++;
@@ -59,20 +55,40 @@ namespace OOPPractice
             Console.Write("Enter Title of the Book: ");
             titleSearch = Console.ReadLine() ?? string.Empty;
 
-            bool condition = false;
-            foreach (Book book in LibraryOfBooks)
+            //This is a list, a lambda expression with Linq to search for a book title 
+            var searchedBooks = _library.Where(l => l.Title.Contains(titleSearch, StringComparison.OrdinalIgnoreCase)).ToList();
+
+            if (searchedBooks.Count == 0) 
             {
-                if (titleSearch == book.Title)
-                {
-                    book.DisplayBookInfo();
-                    condition = true;
-                }
+                Console.WriteLine("No books found.");
             }
 
-            if (condition == false)
+            else
             {
-                Console.WriteLine("No match...");
+                int count = 0;
+                foreach (Book book in searchedBooks)
+                {  
+                    Console.WriteLine($"{count}. {book.Title} by {book.Author}");
+                    count++;
+                }
             }
+            
+        }
+
+        private string ValidateInput(string title)
+        {
+
+            string input = Console.ReadLine() ?? "";
+
+            //Validation if title is empty or null
+            while (string.IsNullOrWhiteSpace(input))
+            {
+                Console.Write($"{title} cannot be empty. Enter a valid {title}: ");
+                input = Console.ReadLine() ?? "";
+            }
+
+            return input;
+
         }
 
 
