@@ -22,7 +22,7 @@ namespace OOPPractice
         //With ISBN
         public Book(string title, string author, string isbn)
         {
-            Title = title;
+            Title = title ?? throw new ArgumentNullException(nameof(title), "Title cannot be null");
             Author = author;
             Isbn = isbn;
         }
